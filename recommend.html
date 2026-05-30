@@ -1,0 +1,237 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Get a Restaurant Recommendation | TasteFind</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600&display=swap"
+      rel="stylesheet"
+    />
+    <script src="js/script.js"></script>
+    <script
+      src="https://kit.fontawesome.com/ba1729775f.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <!-- Overlay for modal -->
+    <div id="scrnOverlay"></div>
+
+    <!-- Navigation menu -->
+    <header class="navbar-header">
+      <nav class="navbar">
+        <a href="index.html" class="nav-logo" aria-label="TasteFind home">
+          <img src="images/logo.png" alt="TasteFind logo" />
+        </a>
+        <input type="checkbox" id="toggle" />
+        <label for="toggle" class="hamburger">&#9776;</label>
+        <ul class="nav-menu">
+          <li><a href="index.html" class="nav-link">Home</a></li>
+          <li><a href="restaurants.html" class="nav-link">Restaurants</a></li>
+          <li>
+            <a href="recommend.html" class="nav-link active">Recommend</a>
+          </li>
+          <li><a href="register.html" class="nav-link">Register</a></li>
+          <li>
+            <a href="reservation.html" class="nav-link nav-cta">Book a Table</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <section class="page-hero">
+        <div class="container">
+          <p class="section-label">Personalised</p>
+          <h1 class="section-heading">Find your perfect restaurant</h1>
+          <p class="section-body">
+            Tell us your dietary needs, budget, and the occasion. Our
+            recommendation engine will match you to the restaurants that suit
+            you best.
+          </p>
+        </div>
+      </section>
+
+      <section>
+        <div class="container">
+          <form id="recommendForm">
+            <!-- Dietary Preference -->
+            <div>
+              <p class="recommend-group-label">
+                <i class="fa-solid fa-leaf"></i>
+                Dietary Preference
+              </p>
+              <div class="recommend-options">
+                <label class="recommend-option">
+                  <input type="radio" name="dietary" value="none" checked />
+                  <span>No Preference</span>
+                </label>
+                <label class="recommend-option">
+                  <input type="radio" name="dietary" value="vegan" />
+                  <span>Vegan</span>
+                </label>
+                <label class="recommend-option">
+                  <input type="radio" name="dietary" value="vegetarian" />
+                  <span>Vegetarian</span>
+                </label>
+                <label class="recommend-option">
+                  <input type="radio" name="dietary" value="halal" />
+                  <span>Halal</span>
+                </label>
+              </div>
+            </div>
+
+            <!-- Budget -->
+            <div>
+              <p class="recommend-group-label">
+                <i class="fa-solid fa-wallet"></i>
+                Budget Per Person
+              </p>
+              <div class="recommend-options">
+                <label class="recommend-option">
+                  <input type="radio" name="budget" value="budget" checked />
+                  <span>Under $50</span>
+                </label>
+                <label class="recommend-option">
+                  <input type="radio" name="budget" value="mid" />
+                  <span>$50 – $100</span>
+                </label>
+                <label class="recommend-option">
+                  <input type="radio" name="budget" value="premium" />
+                  <span>$100 – $200</span>
+                </label>
+                <label class="recommend-option">
+                  <input type="radio" name="budget" value="luxury" />
+                  <span>$200 and above</span>
+                </label>
+              </div>
+            </div>
+
+            <!-- Dining Purpose -->
+            <div>
+              <p class="recommend-group-label">
+                <i class="fa-solid fa-champagne-glasses"></i>
+                Dining Purpose
+              </p>
+              <div class="recommend-options">
+                <label class="recommend-option">
+                  <input type="radio" name="purpose" value="family" checked />
+                  <span>Family Dinner</span>
+                </label>
+                <label class="recommend-option">
+                  <input type="radio" name="purpose" value="date" />
+                  <span>Romantic Date</span>
+                </label>
+                <label class="recommend-option">
+                  <input type="radio" name="purpose" value="business" />
+                  <span>Business Meal</span>
+                </label>
+                <label class="recommend-option">
+                  <input type="radio" name="purpose" value="casual" />
+                  <span>Casual Dining</span>
+                </label>
+                <label class="recommend-option">
+                  <input type="radio" name="purpose" value="special" />
+                  <span>Special Occasion</span>
+                </label>
+              </div>
+            </div>
+
+            <button type="submit" class="btn btn-primary">
+              <i class="fa-solid fa-utensils"></i>
+              Find My Restaurant
+            </button>
+          </form>
+
+          <!-- Results -->
+          <div id="recommendResults">
+            <hr />
+            <p id="resultCount"></p>
+
+            <div id="noResultsMsg">
+              <p>
+                No restaurants match all your preferences. Try adjusting your
+                criteria.
+              </p>
+              <button
+                class="btn btn-secondary"
+                onclick="
+                  document.getElementById('recommendResults').style.display =
+                    'none'
+                "
+              >
+                Try Again
+              </button>
+            </div>
+
+            <!-- Matched restaurant cards -->
+            <div id="resultCards" class="restaurants-grid"></div>
+
+            <div id="bookingActions">
+              <p>Select a restaurant above, then proceed to book your table.</p>
+              <a
+                id="bookingBtn"
+                href="reservation.html"
+                class="btn btn-primary"
+              >
+                <i class="fa-solid fa-calendar-check"></i>
+                Book Selected Restaurant
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Modal -->
+    <div id="restaurantModal" class="modal">
+      <button id="modalClose" class="modal-close" aria-label="Close">
+        &times;
+      </button>
+      <div class="modal-body"></div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+      <div class="container footer-inner">
+        <div class="footer-brand">
+          <a href="index.html" class="footer-logo" aria-label="TasteFind home">
+            <img src="images/logo-white.png" alt="TasteFind logo in white" />
+          </a>
+          <p>
+            Discover, recommend, and reserve the finest dining experiences — all
+            in one platform.
+          </p>
+          <div class="footer-contact">
+            <a href="tel:+61399990000"
+              ><i class="fa-solid fa-phone"></i>+61 3 9999 0000</a
+            >
+            <a href="mailto:hello@tastefind.com.au"
+              ><i class="fa-solid fa-envelope"></i>hello@tastefind.com.au</a
+            >
+          </div>
+        </div>
+        <nav class="footer-nav">
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="restaurants.html">Restaurants</a></li>
+            <li><a href="recommend.html">Recommend</a></li>
+          </ul>
+          <ul>
+            <li><a href="reservation.html">Book a Table</a></li>
+            <li><a href="register.html">Register</a></li>
+          </ul>
+        </nav>
+      </div>
+      <div class="footer-bottom">
+        <div class="container footer-bottom-inner">
+          <p>&copy; 2026 TasteFind by Kelly Sutopo. All rights reserved.</p>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

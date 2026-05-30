@@ -1,0 +1,251 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Register an Account | TasteFind</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600&display=swap"
+      rel="stylesheet"
+    />
+    <script src="js/script.js"></script>
+    <script
+      src="https://kit.fontawesome.com/ba1729775f.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <!-- Navigation menu -->
+    <header class="navbar-header">
+      <nav class="navbar">
+        <a href="index.html" class="nav-logo" aria-label="TasteFind home">
+          <img src="images/logo.png" alt="TasteFind logo" />
+        </a>
+        <input type="checkbox" id="toggle" />
+        <label for="toggle" class="hamburger">&#9776;</label>
+        <ul class="nav-menu">
+          <li><a href="index.html" class="nav-link">Home</a></li>
+          <li><a href="restaurants.html" class="nav-link">Restaurants</a></li>
+          <li><a href="recommend.html" class="nav-link">Recommend</a></li>
+          <li><a href="register.html" class="nav-link active">Register</a></li>
+          <li>
+            <a href="reservation.html" class="nav-link nav-cta">Book a Table</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <section class="page-hero">
+        <div class="container">
+          <p class="section-label">Join TasteFind</p>
+          <h1 class="section-heading">Create your account</h1>
+          <p class="section-body">
+            Sign up to save your favourite restaurants, get personalised
+            recommendations, and book tables in seconds.
+          </p>
+        </div>
+      </section>
+
+      <section>
+        <div class="container">
+          <form
+            id="regForm"
+            method="post"
+            action="http://mercury.swin.edu.au/it000000/cos10005/regtest.php"
+          >
+            <!-- Account Information -->
+            <fieldset>
+              <legend>Account Information</legend>
+
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="username"
+                    >Username<span class="asterisk">*</span></label
+                  >
+                  <input
+                    type="text"
+                    id="username"
+                    name="username"
+                    placeholder="e.g. john123"
+                  />
+                </div>
+                <div class="form-group">
+                  <label for="email"
+                    >Email Address<span class="asterisk">*</span></label
+                  >
+                  <input
+                    type="email"
+                    id="email"
+                    name="email"
+                    placeholder="e.g. you@example.com"
+                  />
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="phone"
+                  >Phone Number<span class="asterisk">*</span></label
+                >
+                <input
+                  type="tel"
+                  id="phone"
+                  name="phone"
+                  maxlength="15"
+                  placeholder="e.g. 0412 345 678"
+                />
+              </div>
+
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="password"
+                    >Password<span class="asterisk">*</span></label
+                  >
+                  <input
+                    type="password"
+                    id="password"
+                    name="password"
+                    placeholder="Min. 10 characters"
+                  />
+                </div>
+                <div class="form-group">
+                  <label for="confirmPassword"
+                    >Confirm Password<span class="asterisk">*</span></label
+                  >
+                  <input
+                    type="password"
+                    id="confirmPassword"
+                    name="confirmPassword"
+                    placeholder="Re-enter password"
+                  />
+                </div>
+              </div>
+            </fieldset>
+
+            <!-- Personal Information -->
+            <fieldset>
+              <legend>Personal Information</legend>
+
+              <div class="form-group">
+                <label>Gender<span class="asterisk">*</span></label>
+                <div class="radio-group" id="genderGroup">
+                  <label class="radio-label">
+                    <input
+                      type="radio"
+                      id="genderMale"
+                      name="gender"
+                      value="male"
+                    />
+                    Male
+                  </label>
+                  <label class="radio-label">
+                    <input
+                      type="radio"
+                      id="genderFemale"
+                      name="gender"
+                      value="female"
+                    />
+                    Female
+                  </label>
+                  <label class="radio-label">
+                    <input
+                      type="radio"
+                      id="genderOther"
+                      name="gender"
+                      value="other"
+                    />
+                    Other
+                  </label>
+                  <label class="radio-label">
+                    <input
+                      type="radio"
+                      id="genderPreferNot"
+                      name="gender"
+                      value="prefer_not"
+                    />
+                    Prefer not to say
+                  </label>
+                </div>
+              </div>
+
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="dietary">Dietary Preferences</label>
+                  <select id="dietary" name="dietary">
+                    <option value="none">No preference</option>
+                    <option value="vegan">Vegan</option>
+                    <option value="vegetarian">Vegetarian</option>
+                    <option value="halal">Halal</option>
+                    <option value="gluten-free">Gluten-free</option>
+                  </select>
+                </div>
+                <div class="form-group">
+                  <label for="country">Country / Region</label>
+                  <select id="country" name="country">
+                    <option value="">Select a country</option>
+                    <option value="au">Australia</option>
+                    <option value="nz">New Zealand</option>
+                    <option value="us">United States</option>
+                    <option value="uk">United Kingdom</option>
+                    <option value="sg">Singapore</option>
+                    <option value="id">Indonesia</option>
+                    <option value="other">Other</option>
+                  </select>
+                </div>
+              </div>
+            </fieldset>
+
+            <div class="form-row">
+              <button type="reset" class="btn btn-secondary">Reset</button>
+              <button type="submit" class="btn btn-primary">
+                Create Account
+              </button>
+            </div>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+      <div class="container footer-inner">
+        <div class="footer-brand">
+          <a href="index.html" class="footer-logo" aria-label="TasteFind home">
+            <img src="images/logo-white.png" alt="TasteFind logo in white" />
+          </a>
+          <p>
+            Discover, recommend, and reserve the finest dining experiences — all
+            in one platform.
+          </p>
+          <div class="footer-contact">
+            <a href="tel:+61399990000"
+              ><i class="fa-solid fa-phone"></i>+61 3 9999 0000</a
+            >
+            <a href="mailto:hello@tastefind.com.au"
+              ><i class="fa-solid fa-envelope"></i>hello@tastefind.com.au</a
+            >
+          </div>
+        </div>
+        <nav class="footer-nav">
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="restaurants.html">Restaurants</a></li>
+            <li><a href="recommend.html">Recommend</a></li>
+          </ul>
+          <ul>
+            <li><a href="reservation.html">Book a Table</a></li>
+            <li><a href="register.html">Register</a></li>
+          </ul>
+        </nav>
+      </div>
+      <div class="footer-bottom">
+        <div class="container footer-bottom-inner">
+          <p>&copy; 2026 TasteFind by Kelly Sutopo. All rights reserved.</p>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,480 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>List of Restaurants | TasteFind</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600&display=swap"
+      rel="stylesheet"
+    />
+    <script src="js/script.js"></script>
+    <script
+      src="https://kit.fontawesome.com/ba1729775f.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <!-- Overlay for modal -->
+    <div id="scrnOverlay"></div>
+
+    <!-- Navigation menu -->
+    <header class="navbar-header">
+      <nav class="navbar">
+        <a href="index.html" class="nav-logo" aria-label="TasteFind home">
+          <img src="images/logo.png" alt="TasteFind logo" />
+        </a>
+        <input type="checkbox" id="toggle" />
+        <label for="toggle" class="hamburger">&#9776;</label>
+        <ul class="nav-menu">
+          <li><a href="index.html" class="nav-link">Home</a></li>
+          <li>
+            <a href="restaurants.html" class="nav-link active">Restaurants</a>
+          </li>
+          <li><a href="recommend.html" class="nav-link">Recommend</a></li>
+          <li><a href="register.html" class="nav-link">Register</a></li>
+          <li>
+            <a href="reservation.html" class="nav-link nav-cta">Book a Table</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <section class="page-hero">
+        <div class="container">
+          <p class="section-label">Browse</p>
+          <h1 class="section-heading">Melbourne's finest restaurants</h1>
+          <p class="section-body">
+            From iconic fine dining to beloved neighbourhood staples, we've
+            curated Melbourne's most exceptional tables. Browse, compare, and
+            book your next great meal.
+          </p>
+        </div>
+      </section>
+
+      <section>
+        <div class="container">
+          <div class="restaurants-grid">
+            <!-- ===== 1. ATTICA ===== -->
+            <article
+              class="restaurant-card"
+              data-name="Attica"
+              data-cuisine="Contemporary Australian"
+              data-rating="4.9"
+              data-price-range="$$$$"
+              data-suburb="Ripponlea"
+              data-address="74 Glen Eira Rd, Ripponlea VIC 3185"
+              data-description="Consistently ranked among the world's 50 best restaurants, Attica is Ben Shewry's extraordinary tribute to Australia's native landscape. Each dish draws on foraged ingredients, indigenous botanicals, and seasonal produce to craft a tasting menu that is as much cultural experience as meal. Located in the quiet suburb of Ripponlea, it requires patience to book but rewards with a dinner unlike any other in the world."
+              data-img-src="images/attica.jpg"
+              data-img-alt="A beautifully plated native ingredient dish at Attica, Ripponlea"
+              data-deposit="$50 per person"
+              data-avg-price="$300-$400"
+              data-reservation-url="reservation.html?restaurant=attica"
+              data-editor-pick="true"
+              data-dishes='[{"name":"Full tasting menu","price":"$335 pp"},{"name":"Matching wine pairing","price":"$235 pp"},{"name":"Non-alcoholic pairing","price":"$145 pp"}]'
+            >
+              <div class="landscape-img-wrap">
+                <img
+                  src="images/attica.jpg"
+                  alt="A beautifully plated native ingredient dish at Attica, Ripponlea"
+                />
+                <span class="cuisine-tag">Contemporary Australian</span>
+                <span class="editor-pick-badge"
+                  ><i class="fa-solid fa-star"></i> Editor's Choice</span
+                >
+              </div>
+              <div class="restaurant-info">
+                <div class="restaurant-meta">
+                  <span class="rating"
+                    ><i class="fa-solid fa-star"></i> 4.9</span
+                  >
+                  <span class="price-range">$$$$</span>
+                </div>
+                <h2>Attica</h2>
+                <p class="restaurant-suburb">
+                  <i class="fa-solid fa-location-dot"></i>
+                  Ripponlea
+                </p>
+                <p class="view-details">View full details &rarr;</p>
+              </div>
+            </article>
+
+            <!-- ===== 2. FLOWER DRUM ===== -->
+            <article
+              class="restaurant-card"
+              data-name="Flower Drum"
+              data-cuisine="Cantonese"
+              data-rating="4.8"
+              data-price-range="$$$$"
+              data-suburb="Melbourne CBD"
+              data-address="17 Market Lane, Melbourne VIC 3000"
+              data-description="Melbourne's most beloved Cantonese institution, Flower Drum has graced Market Lane since 1975. Behind its discreet entrance lies an elegant dining room where immaculate service and time-honoured technique reign supreme. The legendary Peking duck is carved tableside, steamed dumplings arrive translucent and silken, and the attention to detail on every plate is nothing short of extraordinary. A true Melbourne icon."
+              data-img-src="images/flower-drum.jpg"
+              data-img-alt="Tableside Peking duck carving at Flower Drum, Melbourne CBD"
+              data-deposit="$30 per person"
+              data-avg-price="$80-$150"
+              data-reservation-url="reservation.html?restaurant=flower-drum"
+              data-editor-pick="false"
+              data-dishes='[{"name":"Peking duck (half)","price":"$95"},{"name":"Har gow - steamed prawn dumplings","price":"$26"},{"name":"Char siu - barbecued pork","price":"$34"}]'
+            >
+              <div class="landscape-img-wrap">
+                <img
+                  src="images/flower-drum.jpg"
+                  alt="Tableside Peking duck carving at Flower Drum, Melbourne CBD"
+                />
+                <span class="cuisine-tag">Cantonese</span>
+              </div>
+              <div class="restaurant-info">
+                <div class="restaurant-meta">
+                  <span class="rating"
+                    ><i class="fa-solid fa-star"></i> 4.8</span
+                  >
+                  <span class="price-range">$$$$</span>
+                </div>
+                <h2>Flower Drum</h2>
+                <p class="restaurant-suburb">
+                  <i class="fa-solid fa-location-dot"></i>
+                  Melbourne CBD
+                </p>
+                <p class="view-details">View full details &rarr;</p>
+              </div>
+            </article>
+
+            <!-- ===== 3. TIPO 00 ===== -->
+            <article
+              class="restaurant-card"
+              data-name="Tipo 00"
+              data-cuisine="Italian"
+              data-rating="4.7"
+              data-price-range="$$$"
+              data-suburb="Melbourne CBD"
+              data-address="361 Little Bourke St, Melbourne VIC 3000"
+              data-description="Named after the finely milled flour at the heart of great pasta, Tipo 00 has redefined Italian dining in Melbourne. Chef Andreas Papadakis crafts housemade pasta with quiet precision, from the signature paccheri braised in rich oxtail to butter-bathed tortellini that melt on the tongue. Intimate, warm, and perpetually booked, it is a pilgrimage destination for pasta lovers across the city."
+              data-img-src="images/tipo-00.jpg"
+              data-img-alt="Handmade pasta dish at Tipo 00 in Melbourne's CBD"
+              data-deposit="$25 per person"
+              data-avg-price="$60-$90"
+              data-reservation-url="reservation.html?restaurant=tipo-00"
+              data-editor-pick="false"
+              data-dishes='[{"name":"Paccheri all amatriciana","price":"$38"},{"name":"Tortellini burro e salvia","price":"$34"},{"name":"Tagliatelle al ragu","price":"$36"}]'
+            >
+              <div class="landscape-img-wrap">
+                <img
+                  src="images/tipo-00.jpg"
+                  alt="Handmade pasta dish at Tipo 00 in Melbourne's CBD"
+                />
+                <span class="cuisine-tag">Italian</span>
+              </div>
+              <div class="restaurant-info">
+                <div class="restaurant-meta">
+                  <span class="rating"
+                    ><i class="fa-solid fa-star"></i> 4.7</span
+                  >
+                  <span class="price-range">$$$</span>
+                </div>
+                <h2>Tipo 00</h2>
+                <p class="restaurant-suburb">
+                  <i class="fa-solid fa-location-dot"></i>
+                  Melbourne CBD
+                </p>
+                <p class="view-details">View full details &rarr;</p>
+              </div>
+            </article>
+
+            <!-- ===== 4. CHIN CHIN ===== -->
+            <article
+              class="restaurant-card"
+              data-name="Chin Chin"
+              data-cuisine="Southeast Asian"
+              data-rating="4.6"
+              data-price-range="$$"
+              data-suburb="Melbourne CBD"
+              data-address="125 Flinders Lane, Melbourne VIC 3000"
+              data-description="Chin Chin turned Flinders Lane into a destination with its fearless Southeast Asian cooking and impossibly energetic atmosphere. Bold flavours, fierce jungle curries, fragrant betel leaves, and crispy pork belly arrive quickly and hit hard. Walk-ins are welcome and the lively no-fuss spirit keeps the room alive all night. Go hungry, go loud, and don't skip the cocktails."
+              data-img-src="images/chin-chin.jpg"
+              data-img-alt="A bold jungle curry and betel leaf dishes at Chin Chin, Flinders Lane"
+              data-deposit="$20 per person"
+              data-avg-price="$40-$70"
+              data-reservation-url="reservation.html?restaurant=chin-chin"
+              data-editor-pick="false"
+              data-dishes='[{"name":"Jungle curry with beef cheek","price":"$38"},{"name":"Whole baked snapper","price":"$46"},{"name":"Crunchy pork hock","price":"$44"}]'
+            >
+              <div class="landscape-img-wrap">
+                <img
+                  src="images/chin-chin.jpg"
+                  alt="A bold jungle curry and betel leaf dishes at Chin Chin, Flinders Lane"
+                />
+                <span class="cuisine-tag">Southeast Asian</span>
+              </div>
+              <div class="restaurant-info">
+                <div class="restaurant-meta">
+                  <span class="rating"
+                    ><i class="fa-solid fa-star"></i> 4.6</span
+                  >
+                  <span class="price-range">$$</span>
+                </div>
+                <h2>Chin Chin</h2>
+                <p class="restaurant-suburb">
+                  <i class="fa-solid fa-location-dot"></i>
+                  Melbourne CBD
+                </p>
+                <p class="view-details">View full details &rarr;</p>
+              </div>
+            </article>
+
+            <!-- ===== 5. SUPERNORMAL ===== -->
+            <article
+              class="restaurant-card"
+              data-name="Supernormal"
+              data-cuisine="Pan-Asian"
+              data-rating="4.7"
+              data-price-range="$$$"
+              data-suburb="Melbourne CBD"
+              data-address="180 Flinders Lane, Melbourne VIC 3000"
+              data-description="Andrew McConnell's Supernormal draws effortlessly from the flavours of Japan, China, and Korea, weaving them into a menu that feels both adventurous and deeply satisfying. The New England lobster roll is one of Melbourne's most iconic dishes, while the confit duck fried rice and prawn toast are perennial crowd favourites. The room buzzes with energy from open until close."
+              data-img-src="images/supernormal.jpg"
+              data-img-alt="The iconic New England lobster roll at Supernormal, Flinders Lane"
+              data-deposit="$25 per person"
+              data-avg-price="$50-$80"
+              data-reservation-url="reservation.html?restaurant=supernormal"
+              data-editor-pick="false"
+              data-dishes='[{"name":"New England lobster roll","price":"$44"},{"name":"Confit duck fried rice","price":"$38"},{"name":"Japanese milk bread with prawn","price":"$24"}]'
+            >
+              <div class="landscape-img-wrap">
+                <img
+                  src="images/supernormal.jpg"
+                  alt="The iconic New England lobster roll at Supernormal, Flinders Lane"
+                />
+                <span class="cuisine-tag">Pan-Asian</span>
+              </div>
+              <div class="restaurant-info">
+                <div class="restaurant-meta">
+                  <span class="rating"
+                    ><i class="fa-solid fa-star"></i> 4.7</span
+                  >
+                  <span class="price-range">$$$</span>
+                </div>
+                <h2>Supernormal</h2>
+                <p class="restaurant-suburb">
+                  <i class="fa-solid fa-location-dot"></i>
+                  Melbourne CBD
+                </p>
+                <p class="view-details">View full details &rarr;</p>
+              </div>
+            </article>
+
+            <!-- ===== 6. VUE DE MONDE ===== -->
+            <article
+              class="restaurant-card"
+              data-name="Vue de Monde"
+              data-cuisine="Modern Australian"
+              data-rating="4.8"
+              data-price-range="$$$$"
+              data-suburb="Melbourne CBD"
+              data-address="Level 55, Rialto Towers, 525 Collins St, Melbourne VIC 3000"
+              data-description="Perched on the 55th floor of the Rialto Towers, Vue de Monde delivers one of the most theatrical fine dining experiences in Australia. The kitchen champions the finest Australian produce, transforming native ingredients into dishes of striking beauty and complexity. Whether it's wallaby tartare or Murray cod with native herbs, every course is designed to astonish, and the panoramic views don't hurt either."
+              data-img-src="images/vue-de-monde.jpg"
+              data-img-alt="Panoramic views of Melbourne skyline from Vue de Monde on Level 55 of Rialto Towers"
+              data-deposit="$50 per person"
+              data-avg-price="$250-$350"
+              data-reservation-url="reservation.html?restaurant=vue-de-monde"
+              data-editor-pick="true"
+              data-dishes='[{"name":"Signature tasting menu","price":"$295 pp"},{"name":"Wallaby tartare","price":"Included"},{"name":"Murray cod, native herbs","price":"Included"}]'
+            >
+              <div class="landscape-img-wrap">
+                <img
+                  src="images/vue-de-monde.jpg"
+                  alt="Panoramic views of Melbourne skyline from Vue de Monde on Level 55 of Rialto Towers"
+                />
+                <span class="cuisine-tag">Modern Australian</span>
+                <span class="editor-pick-badge"
+                  ><i class="fa-solid fa-star"></i> Editor's Choice</span
+                >
+              </div>
+              <div class="restaurant-info">
+                <div class="restaurant-meta">
+                  <span class="rating"
+                    ><i class="fa-solid fa-star"></i> 4.8</span
+                  >
+                  <span class="price-range">$$$$</span>
+                </div>
+                <h2>Vue de Monde</h2>
+                <p class="restaurant-suburb">
+                  <i class="fa-solid fa-location-dot"></i>
+                  Melbourne CBD
+                </p>
+                <p class="view-details">View full details &rarr;</p>
+              </div>
+            </article>
+
+            <!-- ===== 7. LUNE CROISSANTERIE ===== -->
+            <article
+              class="restaurant-card"
+              data-name="Lune Croissanterie"
+              data-cuisine="French Patisserie"
+              data-rating="4.9"
+              data-price-range="$"
+              data-suburb="Fitzroy"
+              data-address="119 Rose St, Fitzroy VIC 3065"
+              data-description="Former aerospace engineer Kate Reid applies scientific precision to the ancient French art of viennoiserie at Lune, and the results are breathtaking. The all-butter croissant, shattering, flaky, and impossibly light, has been declared among the finest in the world. Queue early at the Fitzroy atelier, or risk missing the cult cruffin. There are few more joyful ways to spend a Melbourne morning."
+              data-img-src="images/lune.jpg"
+              data-img-alt="Golden, flaky croissants fresh from the oven at Lune Croissanterie, Fitzroy"
+              data-deposit="$15 per person"
+              data-avg-price="$15-$30"
+              data-reservation-url="reservation.html?restaurant=lune"
+              data-editor-pick="false"
+              data-dishes='[{"name":"Classic all-butter croissant","price":"$8"},{"name":"Cruffin (seasonal filling)","price":"$11"},{"name":"Kouign-amann","price":"$10"}]'
+            >
+              <div class="landscape-img-wrap">
+                <img
+                  src="images/lune.jpg"
+                  alt="Golden, flaky croissants fresh from the oven at Lune Croissanterie, Fitzroy"
+                />
+                <span class="cuisine-tag">French Patisserie</span>
+              </div>
+              <div class="restaurant-info">
+                <div class="restaurant-meta">
+                  <span class="rating"
+                    ><i class="fa-solid fa-star"></i> 4.9</span
+                  >
+                  <span class="price-range">$</span>
+                </div>
+                <h2>Lune Croissanterie</h2>
+                <p class="restaurant-suburb">
+                  <i class="fa-solid fa-location-dot"></i>
+                  Fitzroy
+                </p>
+                <p class="view-details">View full details &rarr;</p>
+              </div>
+            </article>
+
+            <!-- ===== 8. MINAMISHIMA ===== -->
+            <article
+              class="restaurant-card"
+              data-name="Minamishima"
+              data-cuisine="Japanese Omakase"
+              data-rating="4.9"
+              data-price-range="$$$$"
+              data-suburb="Richmond"
+              data-address="4 Lord St, Richmond VIC 3121"
+              data-description="Koichi Minamishima's eponymous Richmond counter is widely regarded as Melbourne's finest Japanese dining experience. The intimate omakase journey proceeds through the finest seasonal seafood, including fish flown directly from Japan's Toyosu Market. Every piece of nigiri reflects Minamishima's obsessive precision with temperature, seasoning, and purity of flavour. One of the most serene and transporting meals in Australia."
+              data-img-src="images/minamishima.jpg"
+              data-img-alt="Pristine nigiri prepared at the omakase counter at Minamishima, Richmond"
+              data-deposit="$50 per person"
+              data-avg-price="$280-$350"
+              data-reservation-url="reservation.html?restaurant=minamishima"
+              data-editor-pick="true"
+              data-dishes='[{"name":"Omakase dinner menu","price":"$280 pp"},{"name":"Sake pairing","price":"$120 pp"},{"name":"Premium sake pairing","price":"$200 pp"}]'
+            >
+              <div class="landscape-img-wrap">
+                <img
+                  src="images/minamishima.jpg"
+                  alt="Pristine nigiri prepared at the omakase counter at Minamishima, Richmond"
+                />
+                <span class="cuisine-tag">Japanese Omakase</span>
+                <span class="editor-pick-badge"
+                  ><i class="fa-solid fa-star"></i> Editor's Choice</span
+                >
+              </div>
+              <div class="restaurant-info">
+                <div class="restaurant-meta">
+                  <span class="rating"
+                    ><i class="fa-solid fa-star"></i> 4.9</span
+                  >
+                  <span class="price-range">$$$$</span>
+                </div>
+                <h2>Minamishima</h2>
+                <p class="restaurant-suburb">
+                  <i class="fa-solid fa-location-dot"></i>
+                  Richmond
+                </p>
+                <p class="view-details">View full details &rarr;</p>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- CTA banner -->
+      <section class="cta-banner">
+        <div class="container cta-inner">
+          <div>
+            <p class="section-label section-label--light">Not Sure Yet?</p>
+            <h2 class="section-heading section-heading--light">
+              Let us find the perfect match.
+            </h2>
+            <p class="section-body section-body--light">
+              Answer a few quick questions about your preferences and we'll
+              recommend the restaurants that suit you best.
+            </p>
+            <div class="cta-actions">
+              <a href="recommend.html" class="btn btn-primary-dark"
+                >Get a Recommendation</a
+              >
+              <a href="reservation.html" class="btn btn-secondary-dark"
+                >Book Directly</a
+              >
+            </div>
+          </div>
+          <div class="landscape-img-wrap">
+            <img
+              src="images/cta-dining.jpg"
+              alt="A group of friends enjoying a meal together at a restaurant"
+            />
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Modal -->
+    <div id="restaurantModal" class="modal">
+      <button id="modalClose" class="modal-close" aria-label="Close">
+        &times;
+      </button>
+      <div class="modal-body"></div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+      <div class="container footer-inner">
+        <div class="footer-brand">
+          <a href="index.html" class="footer-logo" aria-label="TasteFind home">
+            <img src="images/logo-white.png" alt="TasteFind logo in white" />
+          </a>
+          <p>
+            Discover, recommend, and reserve the finest dining experiences — all
+            in one platform.
+          </p>
+          <div class="footer-contact">
+            <a href="tel:+61399990000">
+              <i class="fa-solid fa-phone"></i>+61 3 9999 0000
+            </a>
+            <a href="mailto:hello@tastefind.com.au">
+              <i class="fa-solid fa-envelope"></i>hello@tastefind.com.au
+            </a>
+          </div>
+        </div>
+        <nav class="footer-nav">
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="restaurants.html">Restaurants</a></li>
+            <li><a href="recommend.html">Recommend</a></li>
+          </ul>
+          <ul>
+            <li><a href="reservation.html">Book a Table</a></li>
+            <li><a href="register.html">Register</a></li>
+          </ul>
+        </nav>
+      </div>
+      <div class="footer-bottom">
+        <div class="container footer-bottom-inner">
+          <p>&copy; 2026 TasteFind by Kelly Sutopo. All rights reserved.</p>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

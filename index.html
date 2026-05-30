@@ -1,0 +1,438 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TasteFind — Discover, Recommend & Reserve</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600&display=swap"
+      rel="stylesheet"
+    />
+    <script src="js/script.js"></script>
+    <script
+      src="https://kit.fontawesome.com/ba1729775f.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <!-- Navigation menu -->
+    <header class="navbar-header">
+      <nav class="navbar">
+        <a href="index.html" class="nav-logo" aria-label="TasteFind home">
+          <img src="images/logo.png" alt="TasteFind logo" />
+        </a>
+        <input type="checkbox" id="toggle" />
+        <label for="toggle" class="hamburger">&#9776;</label>
+        <ul class="nav-menu">
+          <li><a href="index.html" class="nav-link active">Home</a></li>
+          <li><a href="restaurants.html" class="nav-link">Restaurants</a></li>
+          <li><a href="recommend.html" class="nav-link">Recommend</a></li>
+          <li><a href="register.html" class="nav-link">Register</a></li>
+          <li>
+            <a href="reservation.html" class="nav-link nav-cta">Book a Table</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <section id="home-hero">
+        <div id="hero-content">
+          <p class="section-label">Melbourne & Beyond</p>
+          <h1 id="hero-heading">
+            Your Next
+            <em>Great Meal</em>
+            Starts Here.
+          </h1>
+          <p class="section-body">
+            Discover hand-picked restaurants, get personalised dining
+            recommendations, and reserve your table — all in one place.
+          </p>
+          <div class="cta-actions">
+            <a href="restaurants.html" class="btn btn-primary"
+              >Explore Restaurants</a
+            >
+            <a href="recommend.html" class="btn btn-secondary"
+              >Get a Recommendation &rarr;</a
+            >
+          </div>
+        </div>
+        <div id="hero-visual">
+          <div id="hero-img-frame">
+            <img
+              src="images/hero-food.jpg"
+              alt="A beautifully plated dish at one of our featured restaurants"
+              id="hero-img"
+            />
+            <div id="badge-float-1" class="hero-badge">
+              <span style="color: #3d1a0a"
+                ><i class="fa-solid fa-martini-glass"></i
+              ></span>
+              <div>
+                <strong>500+</strong>
+                <small>Restaurants</small>
+              </div>
+            </div>
+            <div id="badge-float-2" class="hero-badge">
+              <span style="color: #fbbf5a"
+                ><i class="fa-solid fa-star"></i
+              ></span>
+              <div>
+                <strong>4.9 / 5</strong>
+                <small>Average Rating</small>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Why us -->
+      <section id="values">
+        <div class="container">
+          <p class="section-label">Why TasteFind</p>
+          <h2 class="section-heading">
+            Everything you need for a perfect dining experience
+          </h2>
+          <div class="three-grid">
+            <article class="value-card">
+              <div class="value-icon">
+                <i class="fa-solid fa-magnifying-glass"></i>
+              </div>
+              <h3>Discover</h3>
+              <p>
+                Browse hundreds of carefully curated restaurants across
+                cuisines, price ranges, and dining styles — from quick bites to
+                unforgettable fine dining.
+              </p>
+            </article>
+
+            <article class="value-card value-card--accent">
+              <div class="value-icon">
+                <i class="fa-solid fa-utensils"></i>
+              </div>
+              <h3>Personalised Picks</h3>
+              <p>
+                Tell us your dietary needs, budget, and occasion. Our smart
+                recommender matches you to the restaurants that truly fit.
+              </p>
+            </article>
+
+            <article class="value-card">
+              <div class="value-icon">
+                <i class="fa-regular fa-calendar-check"></i>
+              </div>
+              <h3>Reserve Instantly</h3>
+              <p>
+                Lock in your table with a simple deposit — no phone calls, no
+                waiting. Flexible booking for groups of any size.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- How it works -->
+      <section>
+        <div id="hiw-layout" class="container">
+          <div>
+            <p class="section-label">How It Works</p>
+            <h2 class="section-heading">
+              From craving to table<br />in four steps
+            </h2>
+            <p class="section-body">
+              TasteFind removes the friction from dining out. Whether you know
+              exactly where you want to go or need a little inspiration, we get
+              you there.
+            </p>
+            <a href="reservation.html" class="btn btn-primary"
+              >Book Your Table</a
+            >
+          </div>
+          <ol>
+            <li class="hiw-step">
+              <span class="step-num">01</span>
+              <div class="step-content">
+                <h3>Browse Restaurants</h3>
+                <p>
+                  Explore our curated directory filtered by cuisine, location,
+                  or price range.
+                </p>
+              </div>
+            </li>
+            <li class="hiw-step">
+              <span class="step-num">02</span>
+              <div class="step-content">
+                <h3>Get Recommended</h3>
+                <p>
+                  Answer a few quick questions and receive tailored restaurant
+                  suggestions.
+                </p>
+              </div>
+            </li>
+            <li class="hiw-step">
+              <span class="step-num">03</span>
+              <div class="step-content">
+                <h3>Book a Table</h3>
+                <p>
+                  Reserve your spot with a simple deposit — online or with a
+                  voucher.
+                </p>
+              </div>
+            </li>
+            <li class="hiw-step">
+              <span class="step-num">04</span>
+              <div class="step-content">
+                <h3>Enjoy Your Meal</h3>
+                <p>
+                  Arrive, relax, and savour an experience chosen just for you.
+                </p>
+              </div>
+            </li>
+          </ol>
+        </div>
+      </section>
+
+      <hr />
+
+      <!-- Target users -->
+      <section id="users">
+        <div class="container">
+          <p class="section-label">Who It's For</p>
+          <h2 class="section-heading">A table for every occasion</h2>
+          <div id="users-grid">
+            <article class="user-card">
+              <div class="user-icon">
+                <i class="fa-solid fa-people-roof"></i>
+              </div>
+              <h3>Families</h3>
+              <p>
+                Kid-friendly menus, spacious venues, and early-evening
+                availability — find places the whole family will love.
+              </p>
+            </article>
+            <article class="user-card">
+              <div class="user-icon"><i class="fa-solid fa-heart"></i></div>
+              <h3>Couples</h3>
+              <p>
+                Romantic ambience, intimate settings, and the perfect menu for a
+                special evening or anniversary dinner.
+              </p>
+            </article>
+            <article class="user-card">
+              <div class="user-icon"><i class="fa-solid fa-briefcase"></i></div>
+              <h3>Professionals</h3>
+              <p>
+                Impress clients with the ideal business lunch or corporate
+                dinner, with private dining options available.
+              </p>
+            </article>
+            <article class="user-card">
+              <div class="user-icon">
+                <i class="fa-solid fa-person-walking-luggage"></i>
+              </div>
+              <h3>Tourists</h3>
+              <p>
+                Discover the city's authentic flavours — from local hidden gems
+                to award-winning dining destinations.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <hr />
+
+      <!-- Featured restaurants -->
+      <section id="featured">
+        <div class="container">
+          <div id="featured-header">
+            <div>
+              <p class="section-label">Editor's Picks</p>
+              <h2 class="section-heading">Restaurants worth knowing</h2>
+            </div>
+            <a href="restaurants.html" class="btn btn-secondary">
+              View all restaurants &rarr;
+            </a>
+          </div>
+          <div class="three-grid">
+            <article class="restaurant-card">
+              <div class="landscape-img-wrap">
+                <img
+                  src="images/flower-drum.jpg"
+                  alt="Tableside Peking duck carving at Flower Drum, Melbourne CBD"
+                />
+                <span class="cuisine-tag">Cantonese</span>
+              </div>
+              <div class="restaurant-info">
+                <div class="restaurant-meta">
+                  <span class="rating"
+                    ><i class="fa-solid fa-star"></i> 4.8</span
+                  >
+                  <span class="price-range">$$$$</span>
+                </div>
+                <h3>Flower Drum</h3>
+                <p class="short-desc">
+                  Melbourne's most beloved Cantonese institution, Flower Drum
+                  has graced Market Lane since 1975. Behind its discreet
+                  entrance lies an elegant dining room where immaculate service
+                  and time-honoured technique reign supreme. The legendary
+                  Peking duck is carved tableside, steamed dumplings arrive
+                  translucent and silken, and the attention to detail on every
+                  plate is nothing short of extraordinary. A true Melbourne
+                  icon.
+                </p>
+                <a
+                  href="reservation.html?restaurant=flower-drum"
+                  class="btn btn-secondary btn-sm"
+                  >Reserve</a
+                >
+              </div>
+            </article>
+
+            <article class="restaurant-card">
+              <div class="landscape-img-wrap">
+                <img
+                  src="images/attica.jpg"
+                  alt="A beautifully plated native ingredient dish at Attica, Ripponlea"
+                />
+                <span class="cuisine-tag">Contemporary Australian</span>
+                <span class="editor-pick-badge"
+                  ><i class="fa-solid fa-star"></i> Editor's Choice</span
+                >
+              </div>
+              <div class="restaurant-info">
+                <div class="restaurant-meta">
+                  <span class="rating"
+                    ><i class="fa-solid fa-star"></i> 4.9</span
+                  >
+                  <span class="price-range">$$$$</span>
+                </div>
+                <h3>Attica</h3>
+                <p class="short-desc">
+                  Consistently ranked among the world's 50 best restaurants,
+                  Attica is Ben Shewry's extraordinary tribute to Australia's
+                  native landscape. Each dish draws on foraged ingredients,
+                  indigenous botanicals, and seasonal produce to craft a tasting
+                  menu that is as much cultural experience as meal. Located in
+                  the quiet suburb of Ripponlea, it requires patience to book
+                  but rewards with a dinner unlike any other in the world.
+                </p>
+                <a
+                  href="reservation.html?restaurant=attica"
+                  class="btn btn-secondary btn-sm"
+                  >Reserve</a
+                >
+              </div>
+            </article>
+
+            <article class="restaurant-card">
+              <div class="landscape-img-wrap">
+                <img
+                  src="images/tipo-00.jpg"
+                  alt="Handmade pasta dish at Tipo 00 in Melbourne's CBD"
+                />
+                <span class="cuisine-tag">Italian</span>
+              </div>
+              <div class="restaurant-info">
+                <div class="restaurant-meta">
+                  <span class="rating"
+                    ><i class="fa-solid fa-star"></i> 4.7</span
+                  >
+                  <span class="price-range">$$$</span>
+                </div>
+                <h3>Tipo 00</h3>
+                <p class="short-desc">
+                  Named after the finely milled flour at the heart of great
+                  pasta, Tipo 00 has redefined Italian dining in Melbourne. Chef
+                  Andreas Papadakis crafts housemade pasta with quiet precision,
+                  from the signature paccheri braised in rich oxtail to
+                  butter-bathed tortellini that melt on the tongue. Intimate,
+                  warm, and perpetually booked, it is a pilgrimage destination
+                  for pasta lovers across the city.
+                </p>
+                <a
+                  href="reservation.html?restaurant=tipo-00"
+                  class="btn btn-secondary btn-sm"
+                  >Reserve</a
+                >
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- CTA banner -->
+      <section class="cta-banner">
+        <div class="container cta-inner">
+          <div>
+            <p class="section-label section-label--light">Don't Wait</p>
+            <h2 class="section-heading section-heading--light">
+              Your perfect table is a click away.
+            </h2>
+            <p class="section-body section-body--light">
+              Join over 4,200 diners who've discovered their next favourite
+              restaurant through TasteFind. It's free, fast, and genuinely
+              personal.
+            </p>
+            <div class="cta-actions">
+              <a href="reservation.html" class="btn btn-primary-dark"
+                >Book a Table</a
+              >
+              <a href="register.html" class="btn btn-secondary-dark"
+                >Register Account</a
+              >
+            </div>
+          </div>
+          <div class="landscape-img-wrap">
+            <img
+              src="images/cta-dining.jpg"
+              alt="A group of friends enjoying a meal together at a restaurant"
+            />
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+      <div class="container footer-inner">
+        <div class="footer-brand">
+          <a href="index.html" class="footer-logo" aria-label="TasteFind home">
+            <img src="images/logo-white.png" alt="TasteFind logo in white" />
+          </a>
+          <p>
+            Discover, recommend, and reserve the finest dining experiences — all
+            in one platform.
+          </p>
+          <div class="footer-contact">
+            <a href="tel:+61399990000">
+              <i class="fa-solid fa-phone"></i>+61 3 9999 0000
+            </a>
+            <a href="mailto:hello@tastefind.com.au">
+              <i class="fa-solid fa-envelope"></i>hello@tastefind.com.au
+            </a>
+          </div>
+        </div>
+        <nav class="footer-nav">
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="restaurants.html">Restaurants</a></li>
+            <li><a href="recommend.html">Recommend</a></li>
+          </ul>
+          <ul>
+            <li><a href="reservation.html">Book a Table</a></li>
+            <li><a href="register.html">Register</a></li>
+          </ul>
+        </nav>
+      </div>
+      <div class="footer-bottom">
+        <div class="container footer-bottom-inner">
+          <p>&copy; 2026 TasteFind by Kelly Sutopo. All rights reserved.</p>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
