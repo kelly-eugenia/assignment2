@@ -74,6 +74,7 @@ h3 {
 
 hr {
   width: 100%;
+  border: none;
   border-top: 1px solid var(--border);
 }
 
@@ -176,6 +177,7 @@ img {
   padding: 12px 26px;
   border: 1.5px solid transparent;
   transition: all var(--transition);
+  cursor: pointer;
 }
 
 .btn-sm {
@@ -505,21 +507,6 @@ footer a i {
     transform var(--transition),
     box-shadow var(--transition);
 }
-.value-card--accent {
-  background: var(--teal);
-  border-color: var(--teal);
-}
-.value-card--accent .value-icon {
-  color: var(--orange-light);
-}
-.value-card--accent h3 {
-  color: var(--cream);
-}
-.value-card--accent p {
-  color: var(--cream-dark);
-  opacity: 0.75;
-}
-
 .value-card h3 {
   font-family: var(--font-display);
   font-size: 24px;
@@ -531,11 +518,25 @@ footer a i {
   color: var(--text-secondary);
   line-height: 1.65;
 }
-
 .value-icon {
   font-size: 35px;
   margin-bottom: 16px;
   display: block;
+}
+
+.value-card--accent {
+  background: var(--teal);
+  border-color: var(--teal);
+}
+.value-card--accent h3 {
+  color: var(--cream);
+}
+.value-card--accent p {
+  color: var(--cream-dark);
+  opacity: 0.75;
+}
+.value-card--accent .value-icon {
+  color: var(--orange-light);
 }
 
 /* How It Works section */
@@ -661,6 +662,13 @@ footer a i {
   grid-template-columns: 1fr auto;
   align-items: center;
   gap: var(--space-xl);
+}
+.cta-img-frame {
+  max-width: 600px;
+  border-radius: 20px;
+  overflow: hidden;
+  flex-shrink: 0;
+  margin-inline: auto;
 }
 
 /* ---------------------------------- */
@@ -798,12 +806,20 @@ p.short-desc {
 }
 
 .view-details {
-  font-size: 13px;
+  background: none;
+  border: none;
+  padding: 0;
+  font: inherit;
+  font-size: 14px;
   font-weight: 500;
+  color: var(--orange-dark);
   cursor: pointer;
+  display: block;
+  transition: all var(--transition);
 }
 .view-details:hover {
   text-decoration: underline;
+  color: var(--brown);
 }
 
 .restaurant-card-actions {
@@ -862,6 +878,7 @@ p.short-desc {
   border-radius: 20px;
   width: 640px;
   max-width: 90%;
+  max-height: 85vh;
   overflow-y: auto;
 }
 
@@ -1174,10 +1191,10 @@ form textarea.invalid {
     margin-inline: auto;
   }
   #badge-float-1 {
-    left: -8px;
+    left: -20px;
   }
   #badge-float-2 {
-    right: -8px;
+    right: -20px;
   }
 
   .three-grid {
@@ -1328,10 +1345,20 @@ form textarea.invalid {
   }
   #badge-float-1,
   #badge-float-2 {
-    position: static;
+    position: absolute;
     animation: none;
-    margin-top: 12px;
-    display: inline-flex;
+    margin-top: 0;
+  }
+  #badge-float-1 {
+    top: 12px;
+    right: 12px;
+    left: auto;
+    bottom: auto;
+  }
+  #badge-float-2 {
+    top: 76px;
+    right: 12px;
+    left: auto;
   }
 
   #users-grid {

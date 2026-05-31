@@ -249,30 +249,29 @@ var restaurantData = [
     reservationUrl: "reservation.html?restaurant=vue-de-monde",
   },
   {
-    id: "lune",
-    name: "Lune Croissanterie",
-    cuisine: "French Patisserie",
-    suburb: "Fitzroy",
-    rating: "4.9",
-    priceRange: "$",
+    id: "stokehouse",
+    name: "Stokehouse",
+    cuisine: "Modern Australian",
+    suburb: "St Kilda",
+    rating: "4.7",
+    priceRange: "$$$",
     editorPick: false,
-    imgSrc: "images/lune.jpg",
-    imgAlt:
-      "Golden, flaky croissants fresh from the oven at Lune Croissanterie, Fitzroy",
-    address: "119 Rose St, Fitzroy VIC 3065",
+    imgSrc: "images/stokehouse.jpg",
+    imgAlt: "Panoramic views of Port Phillip Bay from Stokehouse, St Kilda",
+    address: "30 Jacka Blvd, St Kilda VIC 3182",
     description:
-      "Former aerospace engineer Kate Reid applies scientific precision to the ancient French art of viennoiserie at Lune. The all-butter croissant, shattering and impossibly light, has been declared among the finest in the world. Queue early at the Fitzroy atelier, or risk missing the cult cruffin.",
+      "Perched on the St Kilda foreshore with sweeping views of Port Phillip Bay, Stokehouse is one of Melbourne's most iconic dining destinations. The kitchen champions fresh Australian seafood and seasonal produce, delivered with the kind of relaxed confidence that makes every visit feel like a special occasion — whether it's a long Sunday lunch or a sunset dinner.",
     dishes: [
-      { name: "Classic all-butter croissant", price: "$8" },
-      { name: "Cruffin (seasonal filling)", price: "$11" },
-      { name: "Kouign-amann", price: "$10" },
+      { name: "Whole roasted snapper", price: "$52" },
+      { name: "Bluefin tuna crudo", price: "$28" },
+      { name: "King prawn linguine", price: "$42" },
     ],
-    deposit: "$15 per person",
-    avgPrice: "$15-$30",
-    dietary: ["none", "vegetarian", "vegan"],
-    budgets: ["budget"],
-    purposes: ["family", "casual", "date"],
-    reservationUrl: "reservation.html?restaurant=lune",
+    deposit: "$30 per person",
+    avgPrice: "$80-$120",
+    dietary: ["none"],
+    budgets: ["premium"],
+    purposes: ["date", "family", "special", "casual"],
+    reservationUrl: "reservation.html?restaurant=stokehouse",
   },
   {
     id: "minamishima",
@@ -346,11 +345,11 @@ function runRecommendation() {
     // If doesn't pass either filter, restaurant not qualified -> not displayed in results
     if (!dietaryOk || !budgetOk || !purposeOk) continue;
 
-    matches.push({ r: r, rating: parseFloat(r.rating) });
+    matches.push({ r: r, score: parseFloat(r.rating) });
   }
 
   matches.sort(function (a, b) {
-    return b.rating - a.rating;
+    return b.score - a.score;
   });
   displayResults(matches);
 }
@@ -409,6 +408,11 @@ function displayResults(matches) {
       article.dataset.editorPick = r.editorPick ? "true" : "false";
       article.dataset.dishes = JSON.stringify(r.dishes);
 
+      var bestBadge =
+        i === 0 && score >= 4
+          ? '<span class="editor-pick-badge">&#10003; Best Match</span>'
+          : "";
+
       article.innerHTML =
         '<div class="landscape-img-wrap">' +
         '<img src="' +
@@ -419,6 +423,7 @@ function displayResults(matches) {
         '<span class="cuisine-tag">' +
         r.cuisine +
         "</span>" +
+        bestBadge +
         "</div>" +
         '<div class="restaurant-info">' +
         '<div class="restaurant-meta">' +
@@ -435,7 +440,7 @@ function displayResults(matches) {
         '<p class="restaurant-suburb"><i class="fa-solid fa-location-dot" ></i> ' +
         r.suburb +
         "</p>" +
-        '<p class="view-details">View full details &rarr;</p>' +
+        '<button class="view-details">View full details &rarr;</button>' +
         "</div>";
 
       /* Attach modal to the view-details button */
