@@ -1,9 +1,5 @@
-========================================================
-TasteFind — Restaurant Discovery & Reservation Platform
-COS10005 Web Development, Assignment 2, Semester 1 2026
-By Kelly Sutopo (104475686)
-========================================================
-
+# TasteFind — Restaurant Discovery & Reservation Platform
+## COS10005 Web Development, Assignment 2, Semester 1 2026 by Kelly Sutopo (104475686)
 ---
 
 ## WEBSITE STRUCTURE
@@ -48,7 +44,7 @@ https://github.com/kelly-eugenia/assignment2
 
 ## JAVASCRIPT VALIDATION LOGIC
 
-# REGISTRATION FORM (register.html)
+### REGISTRATION FORM (register.html)
 
 ---
 
@@ -58,23 +54,18 @@ cleared so the form starts fresh on every attempt.
 
 The following rules are checked/validated against:
 
-Username: Must not be empty. - Must be at least 5 characters long. - May only contain letters, numbers, and underscores (no spaces or special characters) (matched using regex).
-
-Email Address: Must not be empty. - Must follow a valid email format (contains "@" and a domain) (matched using regex).
-
-Phone Number: Must not be empty. - After stripping any spaces or dashes, must contain between 8 and 15 digits.
-
-Password: Must not be empty. - Must be at least 10 characters long. - Must contain at least one uppercase letter, one lowercase letter, one number, and one special character (matched using regex).
-
-Confirm Password: Must not be empty. - Must exactly match the Password field.
-
-Gender: At least one gender option must be selected.
+- Username: Must not be empty. - Must be at least 5 characters long. - May only contain letters, numbers, and underscores (no spaces or special characters) (matched using regex).
+- Email Address: Must not be empty. - Must follow a valid email format (contains "@" and a domain) (matched using regex).
+- Phone Number: Must not be empty. - After stripping any spaces or dashes, must contain between 8 and 15 digits.
+- Password: Must not be empty. - Must be at least 10 characters long. - Must contain at least one uppercase letter, one lowercase letter, one number, and one special character (matched using regex).
+- Confirm Password: Must not be empty. - Must exactly match the Password field.
+- Gender: At least one gender option must be selected.
 
 If any rule fails, an error message appears directly below the invalid input field in red, and the input is highlighted with a red border. The form will not be submitted until all errors are resolved.
 
 ---
 
-# RESERVATION FORM (reservation.html)
+### RESERVATION FORM (reservation.html)
 
 ---
 
@@ -82,31 +73,22 @@ The form is validated when the user clicks "Confirm Reservation". Same as regist
 
 The following rules are checked/validated against:
 
-Full Name: Must not be empty.
-
-Email Address: Must not be empty. - Must follow a valid email format (matched using regex).
-
-Phone Number: Must not be empty. - Must contain at least 10 digits.
-
-Restaurant: A restaurant must be selected from the dropdown.
-
-Date: Must not be empty. - Must not be a date in the past. As extra protection, today's date is set as the minimum selectable date when the page loads (in init).
-
-Time: Must not be empty.
-
-Number of Guests: Must not be empty. - Must be at least 1.
-
-Deposit Payment Method: Either Voucher or Online Payment must be selected.
-
-If Online Payment is selected: - A card type must be chosen. - The card number must not be empty. - Visa and Mastercard numbers must be exactly 16 digits. - American Express numbers must be exactly 15 digits. - Only digits are counted (spaces and dashes are ignored).
-
-Billing Email: Must not be empty. - Must follow a valid email format (matched using regex). - If the "Same as email address above" checkbox is ticked, this field is automatically filled in and locked.
+- Full Name: Must not be empty.
+- Email Address: Must not be empty. - Must follow a valid email format (matched using regex).
+- Phone Number: Must not be empty. - Must contain at least 10 digits.
+- Restaurant: A restaurant must be selected from the dropdown.
+- Date: Must not be empty. - Must not be a date in the past. As extra protection, today's date is set as the minimum selectable date when the page loads (in init).
+- Time: Must not be empty.
+- Number of Guests: Must not be empty. - Must be at least 1.
+- Deposit Payment Method: Either Voucher or Online Payment must be selected.
+- If Online Payment is selected: - A card type must be chosen. - The card number must not be empty. - Visa and Mastercard numbers must be exactly 16 digits. - American Express numbers must be exactly 15 digits. - Only digits are counted (spaces and dashes are ignored).
+- Billing Email: Must not be empty. - Must follow a valid email format (matched using regex). - If the "Same as email address above" checkbox is ticked, this field is automatically filled in and locked.
 
 Errors appear inline below each field. The form will not submit until all errors are resolved.
 
 ---
 
-# RECOMMENDATION ENGINE (recommend.html)
+### RECOMMENDATION ENGINE (recommend.html)
 
 ---
 
@@ -127,7 +109,7 @@ If no restaurants satisfy all three filters simultaneously, a "no results" messa
 
 ---
 
-# DYNAMIC BEHAVIOURS (reservation.html)
+### DYNAMIC BEHAVIOURS (reservation.html)
 
 ---
 
@@ -141,7 +123,7 @@ If no restaurants satisfy all three filters simultaneously, a "no results" messa
 
 ---
 
-# RESTAURANT MODAL (restaurants.html, recommend.html)
+### RESTAURANT MODAL (restaurants.html, recommend.html)
 
 ---
 
@@ -151,9 +133,8 @@ The modal consists of two elements in the HTML: #restaurantModal (the modal card
 
 Both start hidden: the modal has display: none and the overlay has visibility: hidden in the CSS.
 
-_Opening the modal_
-
 ---
+_Opening the modal_
 
 On the restaurants page, each restaurant card has a "View full details" button. When clicked, the showRestaurantModal() function runs and is given the card element as its input.
 
@@ -167,9 +148,8 @@ Once the content is built, the function:
 
 On the recommendation page, result cards are created dynamically by JavaScript after the form is submitted. Each card's "View full details" button is wired up in the same way with the modal invocation at the time the card is created.
 
-_Closing the modal_
-
 ---
+_Closing the modal_
 
 The hideRestaurantModal() function reverses everything:
 
@@ -240,5 +220,3 @@ Images
 - Minamishima (minamishima.jpg):
   TripAdvisor
   https://www.tripadvisor.com.au/Restaurant_Review-g635736-d7314896-Reviews-Minamishima-Richmond_Yarra_Greater_Melbourne_Victoria.html
-
-========================================================
